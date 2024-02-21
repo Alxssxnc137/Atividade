@@ -16,6 +16,16 @@ class Projeto {
         this.fimProjeto = fimProjeto
         this.responsavel = responsavel
     }
+    projeto(){
+console.log('------------------PROJETO NOVO-----------------')
+console.log(`NOME DO PROJETO: ${this.nomeProjeto}`)
+console.log(`STATUS: ${this.status}`)
+console.log(`DESCRIÇÃO: ${this.descricao}`)
+console.log(``)
+
+
+
+    }
 
 }
 const projeto = new Projeto("Organização", "Sendo desenvolvido", "O projeto foca em organização", "Gerente de projetos, Equipe de desenvolvimento", new Date('2024-02-23'), new Date('2024-04-25'), "Gerente de Projetos")
