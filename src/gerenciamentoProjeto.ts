@@ -16,20 +16,22 @@ class Projeto {
         this.fimProjeto = fimProjeto
         this.responsavel = responsavel
     }
-    projeto(){
-console.log('------------------PROJETO NOVO-----------------')
-console.log(`NOME DO PROJETO: ${this.nomeProjeto}`)
-console.log(`STATUS: ${this.status}`)
-console.log(`DESCRIÇÃO: ${this.descricao}`)
-console.log(``)
-
-
+    projeto() {
+        console.log('------------------PROJETO NOVO-----------------')
+        console.log(`NOME DO PROJETO: ${this.nomeProjeto}`)
+        console.log(`STATUS: ${this.status}`)
+        console.log(`DESCRIÇÃO: ${this.descricao}`)
+        console.log(`EQUIPE: ${this.equipe}`)
+        console.log(`COMEÇO DO PROJETO: ${this.inicioProjeto}`)
+        console.log(`FIM DO PROJETO: ${this.fimProjeto}`)
+        console.log(`RESPONSÁVEL: ${this.responsavel} `)
+        console.log('------------------------------------------------')
 
     }
 
 }
 const projeto = new Projeto("Organização", "Sendo desenvolvido", "O projeto foca em organização", "Gerente de projetos, Equipe de desenvolvimento", new Date('2024-02-23'), new Date('2024-04-25'), "Gerente de Projetos")
-console.log(projeto)
+console.log(projeto.projeto())
 
 //Controle de Tarefas
 
@@ -43,10 +45,18 @@ class Controle {
         this.projeto = projeto
         this.tarefasIndividuais = tarefasIndividuais
     }
+    controleTarefas() {
+        console.log('-------------CONTROLE DE TAREFAS--------------------')
+        console.log(`PRAZO PARA CONCLUSÃO: ${this.prazoConclusao}`)
+        console.log(`PROJETO DE CONTROLE: ${this.projeto}`)
+        console.log(`TAREFAS INDIVIDUAIS: ${this.tarefasIndividuais}`)
+        console.log('----------------------------------------------------')
+
+    }
 }
 
 const tarefa = new Controle("Organizar relatorio para a empresa", projeto, new Date('2024-04-25'))
-console.log(tarefa)
+console.log(tarefa.controleTarefas())
 
 //Comunicação Interna
 
@@ -67,5 +77,5 @@ class CaomunicacaoInterna {
 }
 
 const comunicacao = new CaomunicacaoInterna("Gerente de projetos, Equipe de desenbvolvimento", "Atualizacoes sobre os projetos",
- "Compartilhamento sobre projetos atuais", "Relatorio sobre questoes resolvidas", "Comunicados sobre o projeto" )
- console.log(comunicacao)
+    "Compartilhamento sobre projetos atuais", "Relatorio sobre questoes resolvidas", "Comunicados sobre o projeto")
+//console.log(comunicacao)
